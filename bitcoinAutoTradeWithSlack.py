@@ -3,9 +3,9 @@ import pyupbit
 import datetime
 import requests
 
-access = "your-access"
-secret = "your-secret"
-myToken = "xoxb-your-token"
+access = "T8Gczn8HRGcr4M8c4ASmxQOV29DI5deTmukhh9I5"
+secret = "ppeVs1imxFRt18DeLCGJKyQ1IFOHCekOY6Oxkfxl"
+myToken = "xoxb-5378818298562-5402557533552-5cXEtXXBkyxNc8dyWk8SLzah"
 
 def post_message(token, channel, text):
     """슬랙 메시지 전송"""
@@ -60,7 +60,7 @@ while True:
         end_time = start_time + datetime.timedelta(days=1)
 
         if start_time < now < end_time - datetime.timedelta(seconds=10):
-            target_price = get_target_price("KRW-BTC", 0.5)
+            target_price = get_target_price("KRW-BTC", 0.4)
             ma15 = get_ma15("KRW-BTC")
             current_price = get_current_price("KRW-BTC")
             if target_price < current_price and ma15 < current_price:
